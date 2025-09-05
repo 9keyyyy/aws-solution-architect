@@ -22,7 +22,7 @@ E. Store the application data in Amazon S3. Create an Amazon Simple Notification
 - **매일 아침 같은 시간** 여러 이메일 주소로 발송
 - **2개 조합** 선택
 
-### ✅ 선택지 재분석
+### ✅ 선택지 분석
 
 **A. Kinesis Data Firehose**
 - **실시간 스트리밍**: 일일 보고서에 부적합 
