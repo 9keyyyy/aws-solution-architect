@@ -1,4 +1,3 @@
-## Security
 ### Security Group
 Security Group 연결 가능 = VPC 내부 리소스
 ```
@@ -131,7 +130,6 @@ S3 Bucket Key:
 
 
 
-
 ### AWS Direct Connect (DC)
 
 #### 핵심 개념
@@ -153,3 +151,37 @@ S3 Bucket Key:
 ```
 
 <br>
+
+
+### DynamoDB DAX vs Global Tables
+
+
+**DAX = DynamoDB 전용 인메모리 캐시**
+
+```yaml
+성능:
+- 마이크로초 단위 응답 시간
+- 읽기 성능 10배 향상
+- 쓰기는 DynamoDB 직접 전달
+
+구조:
+- DynamoDB 앞단에 배치
+- 클러스터 형태 (3-10 노드)
+- Multi-AZ 배포 가능
+```
+
+
+
+**Global Tables = 다중 리전 DynamoDB 복제**
+
+```yaml
+복제:
+- 완전 관리형 다중 리전 복제
+- 자동 양방향 동기화
+- Eventually Consistent
+
+고가용성:
+- 리전 장애시 자동 페일오버
+- 각 리전에서 읽기/쓰기 가능
+- 글로벌 사용자 지원
+```
